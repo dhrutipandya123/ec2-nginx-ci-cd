@@ -32,5 +32,5 @@ jobs:
           docker run -d \
             --name ec2-nginx-cicd \
             --restart unless-stopped \
-            -p 8081:80\
+            -p 8081:80 \
             dhruti2005/ec2-nginx-cicd:latest
