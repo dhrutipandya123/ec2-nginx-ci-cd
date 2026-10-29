@@ -1,4 +1,4 @@
-name: CI - Build and Push Docker Image
+name: CI - Build and Push Apache Docker Image
 
 on:
   push:
@@ -20,9 +20,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and Push Docker Image
+      - name: Build and Push Apache Image
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          tags: dhruti2005/ec2-nginx-cicd:latest
+          tags: dhruti2005/ec2-apache-cicd:latest
